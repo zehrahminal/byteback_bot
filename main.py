@@ -1,22 +1,25 @@
-from flask import Flask, render_template, request, jsonify
-import requests
-import json
+from dotenv import load_dotenv
 import os
+load_dotenv()
 
-app = Flask(__name__)
-
-# --- Constants ---
-TOGETHER_API_KEY = "d2c9d8fee5935eed4653c8e0199776c8be34e2a13e10230b177031b9f49707aa"
+TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 TOGETHER_CHAT_URL = "https://api.together.xyz/v1/chat/completions"
 TOGETHER_MODEL = "mistralai/Mistral-7B-Instruct-v0.2"
 
+from flask import Flask, render_template, request, jsonify
+import requests
+import json
+
+app = Flask(__name__)
+
+# --- System prompts per language ---
 SYSTEM_PROMPTS = {
     "en": "You are ByteBack, a helpful and empathetic legal chatbot trained in Pakistan's cybercrime laws. Speak clearly, sound like ChatGPT, and respond in friendly English.",
     "ur": "آپ ByteBack ہیں، پاکستان کے سائبر کرائم قوانین میں تربیت یافتہ ایک مددگار چیٹ بوٹ۔ آپ سادہ، ہمدرد اور اردو میں جواب دیں۔",
     "roman": "Aap ByteBack hain, Pakistan ke cybercrime qawaneen mein trained aik madadgar chatbot. Roman Urdu mein friendly aur clear jawab dein."
 }
 
-# --- Helpers ---
+# --- Load context from JSON files ---
 def get_context_from_json(lang):
     filename = {
         "en": "qa_english.json",
@@ -36,11 +39,12 @@ def get_context_from_json(lang):
         print("Error loading context:", e)
         return ""
 
-# --- Routes ---
+# --- Home route ---
 @app.route("/")
 def index():
     return render_template("index.html")
 
+# --- Chat route ---
 @app.route("/chat", methods=["POST"])
 def chat():
     user_msg = request.form.get("message", "").strip()
@@ -104,6 +108,6 @@ def chat():
         print("Error:", e)
         return jsonify({"reply": "⚠️ Unexpected error. Please try again."}), 500
 
-# --- Run ---
+# --- Run app ---
 if __name__ == "__main__":
     app.run(debug=True)
