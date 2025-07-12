@@ -1,0 +1,58 @@
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 146-141-056
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:25] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:25] "[35m[1mGET /static/message.mp3 HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:55] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:56] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:56] "[35m[1mGET /static/message.mp3 HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:31:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:USER: hi | LANG: en | MATCHED: False
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:32:10] "POST /chat HTTP/1.1" 200 -
+INFO:root:USER: how are you | LANG: en | MATCHED: False
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:32:30] "POST /chat HTTP/1.1" 200 -
+INFO:root:USER: um so basically i like this guy whos 18 years and im 14 years and we sext sometimes | LANG: en | MATCHED: True
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:32:53] "POST /chat HTTP/1.1" 200 -
+INFO:root:USER: what do i do | LANG: en | MATCHED: False
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:33:04] "POST /chat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:34:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:34:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:34:25] "[35m[1mGET /static/message.mp3 HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:34:25] "GET /static/chatbot.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:34:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:34:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:34:40] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:35:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:35:52] "[35m[1mGET /static/message.mp3 HTTP/1.1[0m" 206 -
+INFO:root:USER: hi | LANG: en | MATCHED: False
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:35:55] "POST /chat HTTP/1.1" 200 -
+INFO:root:USER: how are u | LANG: en | MATCHED: False
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:36:05] "POST /chat HTTP/1.1" 200 -
+INFO:root:USER: who owns you | LANG: en | MATCHED: False
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 16:36:17] "POST /chat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 17:02:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 17:02:17] "[36mGET /static/chatbot.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 17:02:17] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 17:02:17] "[35m[1mGET /static/message.mp3 HTTP/1.1[0m" 206 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 17:02:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:USER: hi | LANG: en | MATCHED: False
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 17:02:23] "POST /chat HTTP/1.1" 200 -
+INFO:root:USER: dyk abt zainab case | LANG: en | MATCHED: True
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 17:02:33] "POST /chat HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\HP\\OneDrive\\Desktop\\byteback_bot\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat

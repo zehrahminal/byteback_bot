@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ByteBack - Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <!-- Add marked.js for markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <!-- Header with centered title + theme toggle -->
+  <div class="header-bar">
+    <div class="heading-row">
+      <h1>ByteBack Assistant</h1>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider">
+          <span class="slider-icon sun">☀️</span>
+          <span class="slider-icon moon">🌙</span>
+        </span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Controls section -->
+  <div class="controls">
+    <select id="languageToggle">
+      <option value="en">English</option>
+      <option value="ur">اردو</option>
+      <option value="roman">Roman Urdu</option>
+    </select>
+    <button class="clear-btn" id="clearBtn">Clear Chat</button>
+    <button class="download-btn" id="downloadBtn">Download PDF</button>
+  </div>
+
+  <!-- 💬 Chat window -->
+  <div class="chat-box" id="chat"></div>
+
+  <!-- 💬 Input form -->
+  <form id="chatForm" autocomplete="off">
+    <input type="text" name="message" id="msgInput" placeholder="Ask about scams, phishing, 2FA..." required autocomplete="off">
+    <button type="submit">Send</button>
+  </form>
+
+  <!-- 🔊 Sound effects -->
+  <audio id="messageSound" src="{{ url_for('static', filename='message.mp3') }}"></audio>
+
+  <!-- 📄 PDF lib -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- 💡 Main chatbot JS -->
+  <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+</body>
+</html>
